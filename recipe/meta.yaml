@@ -1,5 +1,5 @@
 {% set name = "clease" %}
-{% set version = "0.9.6" %}
+{% set version = "0.9.7" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 74067551ec51d8394993301ec059b6cd282bddb97424520c0d2cd0708428473f
+  sha256: 7536022ed36a7b8729e709d6eecaa9083b68b25584ba0371f2404de1668ccc3b
   patches: 
     - remove_kivy.patch
 
