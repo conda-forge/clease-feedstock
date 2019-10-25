@@ -27,6 +27,7 @@ requirements:
     - ase >=3.18
     - matplotlib
     - spglib
+    - scikit-learn
     - {{ pin_compatible('numpy') }}
 
 test:
