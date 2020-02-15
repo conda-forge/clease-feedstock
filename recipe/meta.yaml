@@ -10,7 +10,7 @@ source:
   sha256: c722e7d25cf4c13d1fdcdfa5d5ecde8228f4aa971b174b210249dc9e149bc18b
 
 build:
-  number: 0
+  number: 1
   script: "{{ PYTHON }} -m pip install . -vv"
   skip: true  # [py2k]
 
@@ -25,7 +25,7 @@ requirements:
   run:
     - python
     - ase >=3.18
-    - matplotlib
+    - matplotlib-base
     - spglib
     - scikit-learn
     - {{ pin_compatible('numpy') }}
