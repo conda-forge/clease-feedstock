@@ -24,6 +24,7 @@ requirements:
     - numpy
   run:
     - python
+    - pip
     - ase >=3.18
     - matplotlib-base
     - spglib
@@ -33,6 +34,8 @@ requirements:
 test:
   imports:
     - clease
+  commands:
+    - pip check
 
 about:
   home: https://gitlab.com/computationalmaterials/clease
