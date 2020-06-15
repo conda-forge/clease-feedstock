@@ -1,5 +1,5 @@
 {% set name = "clease" %}
-{% set version = "0.9.11" %}
+{% set version = "0.9.12" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: c722e7d25cf4c13d1fdcdfa5d5ecde8228f4aa971b174b210249dc9e149bc18b
+  sha256: bd7ed609634f05e153701c7e434310040780604dd7050557fb9a80b4d5308453
 
 build:
-  number: 1
-  script: "{{ PYTHON }} -m pip install . -vv"
+  number: 0
+  script: {{ PYTHON }} -m pip install . -vv
   skip: true  # [py2k]
 
 requirements:
@@ -42,7 +42,7 @@ about:
   license: MPL-2.0
   license_family: OTHER
   license_file: LICENSE.md
-  summary: 'CLuster Expansion in Atomic Simulation Environment'
+  summary: CLuster Expansion in Atomic Simulation Environment
 
   description: |
     CLuster Expansion in Atomic Simulation Environment
