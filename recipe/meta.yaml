@@ -30,6 +30,7 @@ requirements:
     - spglib
     - scikit-learn
     - {{ pin_compatible('numpy') }}
+    - typing_extensions
 
 test:
   imports:
