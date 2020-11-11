@@ -33,6 +33,9 @@ requirements:
     - typing_extensions
     - scipy
     - deprecated
+    - mock
+    - pytest
+    - pytest-mock
 
 test:
   imports:
