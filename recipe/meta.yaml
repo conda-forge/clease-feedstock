@@ -41,7 +41,7 @@ test:
     - pip check
 
 about:
-  home: https://gitlab.com/computationalmaterials/clease
+  home: https://computationalmaterials.gitlab.io/clease/
   license: MPL-2.0
   license_family: OTHER
   license_file: LICENSE.md
@@ -49,7 +49,7 @@ about:
 
   description: |
     CLuster Expansion in Atomic Simulation Environment
-  doc_url: https://gitlab.com/computationalmaterials/clease
+  doc_url: https://computationalmaterials.gitlab.io/clease/
   dev_url: https://gitlab.com/computationalmaterials/clease
 
 extra:
