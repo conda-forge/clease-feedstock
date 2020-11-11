@@ -31,6 +31,8 @@ requirements:
     - scikit-learn
     - {{ pin_compatible('numpy') }}
     - typing_extensions
+    - scipy
+    - deprecated
 
 test:
   imports:
