@@ -1,7 +1,7 @@
 About clease
 ============
 
-Home: https://gitlab.com/computationalmaterials/clease
+Home: https://computationalmaterials.gitlab.io/clease/
 
 Package license: MPL-2.0
 
@@ -11,7 +11,7 @@ Summary: CLuster Expansion in Atomic Simulation Environment
 
 Development: https://gitlab.com/computationalmaterials/clease
 
-Documentation: https://gitlab.com/computationalmaterials/clease
+Documentation: https://computationalmaterials.gitlab.io/clease/
 
 CLuster Expansion in Atomic Simulation Environment
 
