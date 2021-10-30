@@ -44,7 +44,6 @@ test:
     - clease
   commands:
     - pip check
-    - clease --version  # Test CLI
 
 about:
   home: https://clease.readthedocs.io/
