@@ -1,5 +1,5 @@
 {% set name = "clease" %}
-{% set version = "0.10.5" %}
+{% set version = "0.10.6" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,14 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: f115cc5c07aceb6bd49306d1540e59f3243f89e51034a000eef8c4248d0c7660
+  sha256: 858b420e27872b3e996c631e6382ab6f0a0b96dcf5c26013e2bae9fdfdb62c9f
 
 build:
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
   skip: true  # [py2k]
+  entry_points:
+    - clease=clease.cli.main:clease_cli
 
 requirements:
   build:
@@ -29,6 +31,8 @@ requirements:
   run:
     - python
     - pip
+    - attrs
+    - cython
     - ase >=3.20
     - matplotlib-base
     - spglib
