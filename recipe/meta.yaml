@@ -29,6 +29,7 @@ requirements:
   run:
     - python
     - pip
+    - attrs
     - ase >=3.20
     - matplotlib-base
     - spglib
