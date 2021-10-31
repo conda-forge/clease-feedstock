@@ -13,6 +13,8 @@ build:
   number: 0
   script: {{ PYTHON }} -m pip install . -vv
   skip: true  # [py2k]
+  entry_points:
+    - clease=clease.cli.main:clease_cli
 
 requirements:
   build:
@@ -30,6 +32,7 @@ requirements:
     - python
     - pip
     - attrs
+    - cython
     - ase >=3.20
     - matplotlib-base
     - spglib
