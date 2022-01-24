@@ -42,6 +42,7 @@ requirements:
     - scipy
     - deprecated
     - click >=8.0.0
+    - packaging
 
 test:
   imports:
