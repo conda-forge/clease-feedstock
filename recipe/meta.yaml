@@ -1,5 +1,5 @@
 {% set name = "clease" %}
-{% set version = "0.11.0" %}
+{% set version = "0.11.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 6ca9d5d25cc1df1b12ecb8852aaf3b2d92431b219df272ba452ef77f0c6d09b1
+  sha256: d8285cb7e08f4350cf229509be7ed8642a72e615dccfefdfbae2c42942210ea8
 
 build:
   number: 0
