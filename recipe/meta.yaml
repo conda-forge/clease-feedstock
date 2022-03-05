@@ -10,7 +10,7 @@ source:
   sha256: 8d050914e9cb2b658b7b816f27180f8a827398fdfa6e65bffa4f073ed3a45441
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
   skip: true  # [py2k]
   entry_points:
@@ -33,7 +33,7 @@ requirements:
     - pip
     - attrs
     - cython
-    - ase >=3.20
+    - ase >=3.20, <3.23
     - matplotlib-base
     - spglib
     - scikit-learn
@@ -43,6 +43,7 @@ requirements:
     - deprecated
     - click >=8.0.0
     - packaging
+    - threadpoolctl
 
 test:
   imports:
