@@ -10,11 +10,14 @@ source:
   sha256: 8d050914e9cb2b658b7b816f27180f8a827398fdfa6e65bffa4f073ed3a45441
 
 build:
-  number: 1
+  number: 2
   script: {{ PYTHON }} -m pip install . -vv
   skip: true  # [py2k]
   entry_points:
     - clease=clease.cli.main:clease_cli
+  # Limit to python 3.7 or newer
+  # and Require cython (skip PyPy)
+  skip: True  # [py<37 or python_impl != 'cpython']
 
 requirements:
   build:
