@@ -12,11 +12,10 @@ source:
 build:
   number: 2
   script: {{ PYTHON }} -m pip install . -vv
-  skip: true  # [py2k]
   entry_points:
     - clease=clease.cli.main:clease_cli
   # Limit to python 3.7 or newer
-  # and Require cython (skip PyPy)
+  # and require cython (skip PyPy)
   skip: True  # [py<37 or python_impl != 'cpython']
 
 requirements:
