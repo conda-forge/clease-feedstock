@@ -1,5 +1,5 @@
 {% set name = "clease" %}
-{% set version = "0.11.3" %}
+{% set version = "0.11.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: de8934f964c2b4f55d5d97a7db764399bf7f6f1a584d3531bec71c3493ced271
+  sha256: 45175320e5cad077cb65d991f13c4204506df9a8f82e0d3a3c10a11f95516557
 
 build:
   number: 0
@@ -16,7 +16,7 @@ build:
     - clease=clease.cli.main:clease_cli
   # Limit to python 3.7 or newer
   # and require cython (skip PyPy)
-  skip: True  # [py<37 or python_impl != 'cpython']
+  skip: true  # [py<37 or python_impl != 'cpython']
 
 requirements:
   build:
