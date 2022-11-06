@@ -3,10 +3,10 @@ bot:
 build_platform:
   osx_arm64: osx_64
 conda_forge_output_validation: true
+github:
+  branch_name: main
+  tooling_branch_name: main
 test_on_native_only: true
 travis:
   secure:
     BINSTAR_TOKEN: l9OGlHMZ2Y/rtvcmCbxkrLP2+0moLHEJfhNDDbKPMjSpO/NEPoMxissPOxfZyeLB3aO1dX6NelA1SsPzhSurd/cBH0ix/04gmsTolQt9sA2anR63EfxOfdvyKw90t2imH5R/METB810sjpfozw8VPYNnE7MavBnuukMpKxo/q8SwyylAAJ5tcPvoBhbVWdXLF5eM9PxsgqSuXAzrO6g8P5sl1yCuvknv0QzFbmf7V9cpCvuopn06UB/UqRQU7eN/EFN5jsdDGnQZiEeURHEWvYsumMFJezuQJ0RpND9f4K14jIVT325zwpj4X+e4hOnSo7VQ+8Wi/DdM3bkGRMUiRusQ8nNV/ipyeisSyP2+7xwW48ohfD6S11NMXosUxn4sIbbxkbKygCG28hVcHNmqGDun9POJctn1UrvPaj/2Qhr4dMJ52NSQq5k3Lud8FLDyefWt6XwjQynfz8PjNQp8za+hO6psojXIsunfE8v7fldM2RiezhQ2fr1OojjUZp6OTRcR9IHp3FaXj3PShmUHbRQMCnEyjpTOAN+OFp2GEd3GEjt2DqoEP04G3heqBUdgSM8B5cMYn22cizAzmxldqPv2ohJBqfq9LHgKC9vMaLXfzMLWn9Wu3juiS4WbP07i5oId/9tVq1cc+rjEttVmj9n/iLHgLqrmORpQZhbPrpM=
-github:
-  branch_name: main
-  tooling_branch_name: main
