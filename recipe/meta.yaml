@@ -10,7 +10,7 @@ source:
   sha256: 3801b2bf050d441e39817f56135b28a8868d82d9f44a1b77d8a6ff0aeaeaa942
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - clease=clease.cli.main:clease_cli
