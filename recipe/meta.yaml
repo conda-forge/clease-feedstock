@@ -1,5 +1,5 @@
 {% set name = "clease" %}
-{% set version = "1.0.6" %}
+{% set version = "1.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 3801b2bf050d441e39817f56135b28a8868d82d9f44a1b77d8a6ff0aeaeaa942
+  sha256: 1597be5b1918d1f440181b86f84e7d041d529541f9dac0eea61b1ed3905369f9
 
 build:
-  number: 2
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - clease=clease.cli.main:clease_cli
