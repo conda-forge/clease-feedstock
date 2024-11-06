@@ -10,7 +10,7 @@ source:
   sha256: 1597be5b1918d1f440181b86f84e7d041d529541f9dac0eea61b1ed3905369f9
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - clease=clease.cli.main:clease_cli
@@ -29,6 +29,7 @@ requirements:
   host:
     - python
     - pip
+    - setuptools
     - cython
     - numpy
   run:
