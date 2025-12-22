@@ -1,13 +1,13 @@
 {% set name = "clease" %}
-{% set version = "1.1.0" %}
+{% set version = "1.2.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 1597be5b1918d1f440181b86f84e7d041d529541f9dac0eea61b1ed3905369f9
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: c03e902177f41fcfd4d3123f5aec59c6fcc9cc18014260641b018584ad69fcb3
 
 build:
   number: 0
@@ -31,6 +31,7 @@ requirements:
     - pip
     - cython
     - numpy
+    - setuptools
   run:
     - python
     - pip
