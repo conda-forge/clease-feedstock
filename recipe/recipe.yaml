@@ -1,0 +1,76 @@
+schema_version: 1
+
+context:
+  name: clease
+  version: "1.2.0"
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
+  sha256: c03e902177f41fcfd4d3123f5aec59c6fcc9cc18014260641b018584ad69fcb3
+
+build:
+  # Limit to python 3.10 or newer
+  # and require cython (skip PyPy)
+  number: 3
+  skip: match(python, "<3.10") or python_impl != 'cpython'
+  script: ${{ PYTHON }} -m pip install . -vv
+  python:
+    entry_points:
+      - clease=clease.cli.main:clease_cli
+
+requirements:
+  build:
+    - if: build_platform != target_platform
+      then: python
+    - if: build_platform != target_platform
+      then: cross-python_${{ target_platform }}
+    - if: build_platform != target_platform
+      then: cython
+    - ${{ compiler('cxx') }}
+    - ${{ stdlib("c") }}
+  host:
+    - python
+    - pip
+    - cython
+    - setuptools
+  run:
+    - python
+    - pip
+    - attrs
+    - cython
+    - ase >=3.22
+    - matplotlib-base
+    - spglib
+    - scikit-learn
+    - ${{ pin_compatible('numpy') }}
+    - typing_extensions
+    - scipy
+    - deprecated
+    - click >=8.0.0
+    - packaging
+    - threadpoolctl
+
+tests:
+  - python:
+      imports:
+        - clease
+      pip_check: true
+
+about:
+  license: MPL-2.0
+  license_file: LICENSE.md
+  summary: CLuster Expansion in Atomic Simulation Environment
+  description: |
+    CLuster Expansion in Atomic Simulation Environment
+  homepage: https://clease.readthedocs.io/
+  repository: https://gitlab.com/computationalmaterials/clease
+  documentation: https://clease.readthedocs.io/
+
+extra:
+  recipe-maintainers:
+    - jan-janssen
+    - atygesen
